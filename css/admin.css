@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #3c3f3c;
+    font-weight: 300;
+    font-size: 1em;
+    background: linear-gradient(to right, #2a74ec, #3577e2);
+}
+
+/*               Global Classes            */
+
+.container {
+    margin: 2% 4%;
+    background: #f6ffff;
+    border-radius: 20px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+/*             Left Container            */
+
+.small-flex-container {
+    flex-direction: column;
+    flex: 1;
+    background: #0f59d2;
+    color: #f6ffff;
+    border-radius: 20px;
+}
+
+.small-flex-container i {
+    margin-right: 7px;
+}
+
+.logo-container {
+    margin: -60px 0 -40px 0;
+}
+
+.logo-container .logo {
+    height: 200px;
+    width: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.small-flex-container li {
+    list-style: none;
+    margin: 40px 0 50px 30px;
+}
+
+.small-flex-container a {
+    color: #f6ffff;
+    font-size: 120%;
+    text-decoration: none;
+}
+
+/*           Right Container             */
+
+/* .active {
+    background: #f6ffff;
+    margin: 10px 0 20px 15px;
+    padding: 10px 0 10px 20px;
+    border-radius: 7px;
+} */
+
+.big-flex-container {
+    flex: 4;
+}
+
+.big-flex-container i {
+    margin-right: 40px;
+    margin-left: -15px;
+} 
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 30px;
+}
+
+.top h2 {
+    font-size: 160%;
+    letter-spacing: 1px;
+    margin-left: 30px;
+}
+
+.top input {
+    margin-right: 30px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 1px solid #3c3f3c;
+    color: #3c3f3c;
+    outline: none;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    margin: 40px 0;
+}
+
+.img-container img {
+    width: 150px;
+    height: 110px;
+    margin-left: 35px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.top .copy-text {
+    width: 60%;
+    margin-left: 10%;
+    place-items: center;
+    grid-template-rows: 1fr 1fr 1fr;
+    line-height: 170%;
+}
+
+.product-description h3 {
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.product-description h5 {
+    font-size: 110%;
+    text-decoration: line-through;
+    margin: 7px 10px 0 0;
+    color: #9da19d;
+    font-weight: 300;
+}
+
+.product-description h5 span {
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 400;
+    display: inline-block;
+    font-size: 130%;
+    color: #3c3f3c;
+}
