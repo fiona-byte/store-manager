@@ -9,6 +9,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
+
+        <!--                Modal                     -->
+
+    <div class="create-container">
+
+        <div class="close">
+            <div id="close-bar1" class="close-bar"></div>
+            <div id="close-bar2" class="close-bar"></div>
+        </div>
+
+        <div class="center">
+            <h2>Create Product</h2>
+        </div>
+        <form action="" class="myform">
+            <label for="product-name">
+                <input type="text" name="product-name" id="product-name" placeholder="Name of Product">
+            </label>
+
+            <label for="quantity">
+                <input type="number" name="quantity" id="quantity" placeholder="Quantity">
+            </label>
+
+            <label for="description">
+                <textarea name="description" id="description" cols="30" rows="8" placeholder="Description"></textarea>
+            </label>
+
+            <label for="price">
+                <input type="number" name="price" id="price" placeholder="Price">
+            </label>
+
+            <label for="product-image"><p>Select product image</p>
+                <input type="file" name="product-image" id="product-image">
+            </label>
+
+            <a href="" class="btn">Create</a>
+
+        </form>
+    </div>
+
     <div class="container">
         <div class="flex-container">
             <div class="small-flex-container">
@@ -16,18 +55,25 @@
                     <a href="#"><img src="./images/logo.png" alt="logo" class="logo"></a>
                 </div>
                 <ul>
-                    <li><a href="#" class="nav-links active">Dashboard</a></li>
-                    <li><a href="#" class="nav-links">Profile</a></li>
-                    <li><i class="fas fa-cart"></i><a href="#" class="nav-links">Top products</a></li>
-                    <li><i class="fas fa-cart-plus"></i><a href="#" class="nav-links">Create products</a></li>
-                    <li><i class="fas fa-eye"></i><a href="./admin.html" class="nav-links">View all products</a></li>
+                    <li><i class="fas fa-home"></i><a href="#" class="nav-links active">Dashboard</a></li>
+                    <li><i class="fas fa-user-alt"></i><a href="#" class="nav-links">Profile</a></li>
+                    <li><i class="fas fa-shopping-cart"></i><a href="./admin.html" class="nav-links">Top products</a></li>
+                    <li><i class="fas fa-cart-plus"></i><a href="#" class="nav-links modal">Create products</a></li>
+                    <li><i class="fas fa-eye"></i><a href="#" class="nav-links">View all products</a></li>
                     <!-- <img src="" alt="" class="profile-img"><i class="fas fa-plus"></i> -->
                 </ul>
             </div>
+            
+            <div class="menu-toggle" id="menu">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+            </div>
+
             <div class="big-flex-container">
                 <div class="top">
                     <div class="header">
-                        <h2>Top Products</h2>
+                        <h2>All Products</h2>
                     </div>
                     <form action="">
                         <input type="search" name="search" id="search" placeholder="Search here ..."><i class="fas fa-search"></i>
@@ -35,5 +81,121 @@
                 </div>
 
                 <div class="products-main-container">
+                    <div class="img-grid">
+                        <img src="https://res.cloudinary.com/dw4rdnuqh/image/upload/v1594980524/store-manager/shoe10_wieql8.jpg" alt="shoe">
+                        <div class="cta-btn">
+                            <a href="#">Update</a>
+                            <a href="#">Delete</a>
+                        </div>
+                    </div>
+                    <div class="img-grid">
+                        <img src="https://res.cloudinary.com/dw4rdnuqh/image/upload/v1594980529/store-manager/shoe13_hoepep.jpg" alt="shoe">
+                        <div class="cta-btn">
+                            <a href="#">Update</a>
+                            <a href="#">Delete</a>
+                        </div>
+                    </div>
+                    <div class="img-grid">
+                        <img src="https://res.cloudinary.com/dw4rdnuqh/image/upload/v1594980582/store-manager/shoe14_gcx25x.jpg" alt="shoe">
+                        <div class="cta-btn">
+                            <a href="#">Update</a>
+                            <a href="#">Delete</a>
+                        </div>
+                    </div>
+                    <div class="img-grid">
+                        <img src="https://res.cloudinary.com/dw4rdnuqh/image/upload/v1594980647/store-manager/shoe15_db0wgc.jpg" alt="shoe">
+                        <div class="cta-btn">
+                            <a href="#">Update</a>
+                            <a href="#">Delete</a>
+                        </div>                    
+                    </div>
+                    <div class="img-grid">
+                        <img src="./images/shoe16.jpg" alt="shoe">
+                        <div class="cta-btn">
+                            <a href="#">Update</a>
+                            <a href="#">Delete</a>
+                        </div>
+                    </div>
+                    <div class="img-grid">
+                        <img src="https://res.cloudinary.com/dw4rdnuqh/image/upload/v1594980540/store-manager/shoe19_bisvxa.jpg" alt="shoe">
+                        <div class="cta-btn">
+                            <a href="#">Update</a>
+                            <a href="#">Delete</a>
+                        </div>
+                    </div>
+                    <div class="img-grid">
+                        <img src="https://res.cloudinary.com/dw4rdnuqh/image/upload/v1594980673/store-manager/shoe21_uh9xlw.jpg" alt="shoe">
+                        <div class="cta-btn">
+                            <a href="#">Update</a>
+                            <a href="#">Delete</a>
+                        </div>
+                    </div>
+                    <div class="img-grid">
+                        <img src="https://res.cloudinary.com/dw4rdnuqh/image/upload/v1594980608/store-manager/shoe22_kqsben.jpg" alt="shoe">
+                        <div class="cta-btn">
+                            <a href="#">Update</a>
+                            <a href="#">Delete</a>
+                        </div>
+                    </div>
+                    <div class="img-grid">
+                        <img src="https://res.cloudinary.com/dw4rdnuqh/image/upload/v1594980638/store-manager/shoe23_zwnn08.jpg" alt="shoe">
+                        <div class="cta-btn">
+                            <a href="#">Update</a>
+                            <a href="#">Delete</a>
+                        </div>
+                    </div>
+                    <div class="img-grid">
+                        <img src="https://res.cloudinary.com/dw4rdnuqh/image/upload/v1594980399/store-manager/Shoe3_qqojqq.jpg" alt="shoe">
+                        <div class="cta-btn">
+                            <a href="#">Update</a>
+                            <a href="#">Delete</a>
+                        </div>
+                    </div>
+                    <div class="img-grid">
+                        <img src="https://res.cloudinary.com/dw4rdnuqh/image/upload/v1594980490/store-manager/Shoe6_r0t85t.jpg" alt="shoe">
+                        <div class="cta-btn">
+                            <a href="#">Update</a>
+                            <a href="#">Delete</a>
+                        </div>
+                    </div>
+                    <div class="img-grid">
+                        <img src="https://res.cloudinary.com/dw4rdnuqh/image/upload/v1594980363/store-manager/Shoe2_cax9dt.jpg" alt="shoe">
+                        <div class="cta-btn">
+                            <a href="#">Update</a>
+                            <a href="#">Delete</a>
+                        </div>
+                    </div>
+                    <div class="img-grid">
+                        <img src="https://res.cloudinary.com/dw4rdnuqh/image/upload/v1594980483/store-manager/shoe11_ycsnyy.jpg" alt="shoe">
+                        <div class="cta-btn">
+                            <a href="#">Update</a>
+                            <a href="#">Delete</a>
+                        </div>
+                    </div>
+                    <div class="img-grid">
+                        <img src="https://res.cloudinary.com/dw4rdnuqh/image/upload/v1594980676/store-manager/shoe18_kgvlwi.jpg" alt="shoe">
+                        <div class="cta-btn">
+                            <a href="#">Update</a>
+                            <a href="#">Delete</a>
+                        </div>
+                    </div>
+                    <div class="img-grid">
+                        <img src="https://res.cloudinary.com/dw4rdnuqh/image/upload/v1594980645/store-manager/shoe12_vpzxef.jpg" alt="shoe">
+                        <div class="cta-btn">
+                            <a href="#">Update</a>
+                            <a href="#">Delete</a>
+                        </div>
+                    </div>
+                    <div class="img-grid">
+                        <img src="https://res.cloudinary.com/dw4rdnuqh/image/upload/v1594980675/store-manager/shoe24_s95vl6.jpg" alt="shoe">
+                        <div class="cta-btn">
+                            <a href="#">Update</a>
+                            <a href="#">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./js/admin.js"></script>
 </body>
 </html>
