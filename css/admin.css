@@ -225,7 +225,6 @@ body {
 
 .remove-modal {
     display: none;
-    transition: display .1s;
 }
 
 .create-container {
@@ -260,7 +259,7 @@ textarea {
     display: block;
     padding: 10px;
     margin: 10px 0 10px 25px;
-    width: 85%;
+    width: 90%;
     background: transparent;
     border: 1px solid #f6ffff;
     border-radius: 6px;
@@ -275,9 +274,6 @@ textarea {
 input[type=file] {
     display: block;
     margin: 10px 0 10px 25px;
-    /* border: 1px solid #0f59d2;
-    padding: 10px;
-    border-radius: 6px; */
     color: #f6ffff;
 }
 
@@ -294,7 +290,7 @@ textarea::placeholder {
     margin: 20px 0 0 25px;
 }
 
-.btn {
+.btn-create {
     text-decoration: none;
     display: inline-block;
     padding: 8px 15px;
@@ -302,22 +298,22 @@ textarea::placeholder {
     font-size: 110%;
     color: #f6ffff;
     background: transparent;
-    text-align: center;
     width: 17%;
+    text-align: center;
     border: 1px solid #f6ffff;
     margin-left: 40%;
     transition: background .6s;
     margin-top: 15px;
 }
 
-.btn:hover {
+.btn-create:hover {
     background: #063c94;
     border: 1px solid #063c94;
 }
 
 /*               Media Queries                */
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
 
     body {font-size: .85em}
 
@@ -343,10 +339,10 @@ textarea::placeholder {
     input[type=number],
     textarea {
         margin: 10px 0 10px 25px;
-        width: 77%;
+        width: 87%;
     }
 
-    .btn{width: 20%;}
+    .btn-create{width: 20%;}
 
     .container {
         margin: 0;
@@ -408,16 +404,24 @@ textarea::placeholder {
 @media only screen and (max-width: 480px) {
 
     .create-container {
-        width: 80%;
-        top: 5%;
-        left: 10%;
+        width: 90%;
+        top: 3%;
+        left: 5%;
     }
 
-    .logo-container { margin: -85px 0 -100px 60px; }
+    .btn-create{width: 25%;}
+
+
+    .logo-container { margin: -85px 0 -100px 50px; }
 
     .small-flex-container {
         position: absolute;
-        width: 70%;
+        width: 75%;
+    }
+
+    .dashboard-items li {
+        margin-left: 70px;
+        text-align: left;
     }
 
     .top {
@@ -436,6 +440,7 @@ textarea::placeholder {
         margin-right: 25px;
         padding: 8px 10px;
         margin-left: 45px;
+        margin-bottom: 20px;
     }
 
     .big-flex-container { padding-left: 20px; }
@@ -460,9 +465,47 @@ textarea::placeholder {
         left: 5%;
     }
 
+    .logo-container { margin: -85px 0 -100px 30px; }
+
+    ul {
+        margin-left: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    .create-container {
+        width: 95%;
+        top: 5%;
+        left: 2.5%;
+    }
+
+    ul {
+        margin-left: 0.1rem;
+    }
+
+    .top input {
+        margin-right: 20px;
+        padding: 8px 5px;
+        margin-left: 30px;
+        margin-bottom: 20px;
+    }
+
+    .logo-container { margin: -85px 0 -100px 10px; }
+
+    .img-container img {
+        width: 100px;
+        height: 80px;
+    }
+
     input[type=text],
     input[type=number],
     textarea {
-        width: 75%;
+        margin: 10px 0 10px 20px;
     }
+
+    .myform p { margin-top : 15px;}
+
+    .btn-create { margin-top: 10px; }
+
 }

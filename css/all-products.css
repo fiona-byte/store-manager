@@ -72,6 +72,7 @@ li {
     background: #0f59d2;
     color: #f6ffff;
     border-radius: 20px;
+    margin-right: 40px;
 }
 
 .small-flex-container i {
@@ -144,12 +145,12 @@ li {
 
 .products-main-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .big-flex-container img {
-    width: 180px;
-    height: 150px;
+    width: 230px;
+    height: 180px;
     display: block;
     border-radius: 8px;
     margin:0 30px 20px 30px;
@@ -161,14 +162,22 @@ li {
     margin-left: 20%;
 }
 
-.big-flex-container a {
+.big-flex-container .btn {
     display: inline-block;
-    background: #0f59d2;
     text-decoration: none;
     padding: 8px 10px;
     font-size: 85%;
     color: #f6ffff;
     border-radius: 6px;
+    margin: 0 5px;
+}
+
+.btn-blue {
+    background: #0f59d2;
+}
+
+.btn-red {
+    background: #db2424;
 }
 
 /*              Modal               */
@@ -238,7 +247,7 @@ textarea {
     display: block;
     padding: 10px;
     margin: 10px 0 10px 25px;
-    width: 85%;
+    width: 90%;
     background: transparent;
     border: 1px solid #f6ffff;
     border-radius: 6px;
@@ -269,7 +278,7 @@ textarea::placeholder {
     margin: 20px 0 0 25px;
 }
 
-.btn {
+.btn-create {
     text-decoration: none;
     display: inline-block;
     padding: 8px 15px;
@@ -285,7 +294,7 @@ textarea::placeholder {
     margin-top: 15px;
 }
 
-.btn:hover {
+.btn-create:hover {
     background: #063c94;
     border: 1px solid #063c94;
 }
@@ -293,7 +302,7 @@ textarea::placeholder {
 /*               Media Queries                */
 
 @media only screen and (max-width: 1200px) {
-    body {font-size: .9em}
+    body {font-size: .95em}
 
     .big-flex-container img {
         margin-left: 20px;
@@ -301,7 +310,7 @@ textarea::placeholder {
 
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
 
     body {font-size: .85em}
 
@@ -309,6 +318,8 @@ textarea::placeholder {
         width: 50%;
         top: 5%;
     }
+
+    .products-main-container { grid-template-columns: 1fr 1fr; }
 
     .small-flex-container li {
         margin: 40px 0 50px 15px;
@@ -327,15 +338,17 @@ textarea::placeholder {
     input[type=number],
     textarea {
         margin: 10px 0 10px 25px;
-        width: 77%;
+        width: 87%;
     }
 
-    .btn{width: 20%;}
+    .btn-create{width: 20%;}
 
     .container {
         margin: 0;
         border-radius: 0;
     }
+
+    .products-main-container { justify-items: center; }
 
     .small-flex-container {
         position: absolute;
@@ -390,26 +403,30 @@ textarea::placeholder {
 
     .logo-container .logo { height: 250px;}
 
-    .big-flex-container { padding-left: 40px; }
+    .top h2 {margin-left: 70px; }
 }
 
 @media only screen and (max-width: 480px) {
 
     .create-container {
-        width: 80%;
-        top: 5%;
-        left: 10%;
+        width: 90%;
+        top: 3%;
+        left: 5%;
     }
 
-    .logo-container { margin: -85px 0 -100px 60px; }
+    .btn-create{width: 25%;}
 
-    ul {
-        margin-left: 4rem;
-    }
+    .logo-container { margin: -85px 0 -100px 50px; }
+    .products-main-container { grid-template-columns: 1fr; }
 
     .small-flex-container {
         position: absolute;
-        width: 70%;
+        width: 75%;
+    }
+
+    .dashboard-items li {
+        margin-left: 70px;
+        text-align: left;
     }
 
     .top {
@@ -430,8 +447,12 @@ textarea::placeholder {
         margin-left: 45px;
         margin-bottom: 20px;
     }
-
-    .big-flex-container { padding-left: 20px; }
+    
+    .big-flex-container .btn {
+        padding: 10px 12px;
+        font-size: 100%;
+        margin: 0 5px;
+    }
 
 }
 
@@ -445,9 +466,35 @@ textarea::placeholder {
         left: 5%;
     }
 
+    .logo-container { margin: -85px 0 -100px 30px; }
+
+    ul {
+        margin-left: 3.5rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    .create-container {
+        width: 95%;
+        top: 5%;
+        left: 2.5%;
+    }
+
+    .logo-container { margin: -85px 0 -100px 10px; }
+
+    ul {
+        margin-left: 3rem;
+    }
+
     input[type=text],
     input[type=number],
     textarea {
-        width: 75%;
+        margin: 10px 0 10px 20px;
     }
+
+    .myform p { margin-top : 15px;}
+
+    .btn-create { margin-top: 10px; }
+
 }
