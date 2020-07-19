@@ -26,7 +26,6 @@ body{
 #name{
     padding: 1rem 7rem 1rem 3rem;
     margin: .1rem 0;
-    width: 80%;
     border-radius: 5px;
     border: 1px solid #fff;
     cursor: pointer;
@@ -35,7 +34,6 @@ body{
 #email{
     padding: 1rem 7rem 1rem 3rem;
     margin: .1rem 0;
-    width: 80%;
     border-radius: 5px;
     border: 1px solid #fff;
     cursor: pointer;
@@ -44,7 +42,6 @@ body{
 #password{
     padding: 1rem 7rem 1rem 3rem;
     margin: .1rem 0;
-    width: 80%;
     border-radius: 5px;
     border: 1px solid #fff;
     cursor: pointer;
@@ -53,8 +50,8 @@ body{
 .btn{
     padding: .8rem;
     margin: 1rem 0;
-    width: 50%;
     border-radius: 5px;
+    width: 10rem;
     color:#fff;
     cursor: pointer;
     font-size: 18px;
@@ -80,7 +77,7 @@ body{
 .svg {
 	width: 400px;
 	height: 400px;
-	background: url(../IMG/icon.svg) ;
+	background: url(../images/icon.svg) ;
     background-size: 400px 400px; 
 }
 
@@ -136,120 +133,37 @@ p,h4,h2{
 /* footer ends here */
     /* media querries */
 
-
-
 @media only screen and (max-width:1200px){
+    .svg {
+       display: none;
+    }
     .main{
-        margin: 5rem auto;
-        background-color: #d6d5d5;
-        display: flex;
-        justify-content: space-between;
-        width: 70vw;
-        border-radius: 2rem 0;
-    }
-    #name{
-        width: 60%;
-    }
-    #email{
-        width: 60%;
-    }
-    #password{
-        width: 60%;
-    }
-    .btn{
-        width: 60%;
-    }
-     .svg{
-        visibility: visible;
-        width: 400px;
-        height: 400px;
-        background-size: 300px 300px;
-        background-repeat: no-repeat;
-        position: relative;
-        left: 1rem;
-        top: 5rem;
-    }
-    /* footer */
-
-    .footer{
-        display: flex;
-        justify-content:space-around;
+        justify-content: center;
+        align-items: center;
     }
 }
-@media only screen and (max-width:900px){
 
-    .svg{
-        visibility: hidden;
-        /* width: 500px;
-        height: 500px;
-        background-size: 250px 400px;
-        background-repeat: no-repeat;
-       position: relative;
-       left: 5rem; */
-    }
-    #name{
-        width: 50%;
-    }
-    #email{
-        width: 50%;
-    }
-    #password{
-        width: 50%;
-    }
-    .btn{
-        width: 60%;
-    }
-    /* footer */
 
-    .footer{
-        display: flex;
-        justify-content:space-around;
-    }
-}
 @media only screen and (max-width:768px){
 
-    #name{
-        width: 70%;
-    }
-    #email{
-        width: 70%;
-    }
-    #password{
-        width: 70%;
-    }
-    .btn{
-        width: 90%;
-    }
     .svg{
-        visibility: hidden;
+        display: none;
     }
-    /* footer */
-
-
-    .footer{
-        display: flex;
-        justify-content:space-around;
+    .main{
+        justify-content: center;
+        align-items: center;
     }
-    
     
 }
 @media only screen and (max-width:600px){
 
-    .svg{
-        visibility: hidden;
-    }
-    #name{
-        width: 70%;
-    }
-    #email{
-        width: 70%;
-    }
-    #password{
-        width: 70%;
-    }
-    .btn{
-        width: 90%;
-    }
+    .main{
+        justify-content: center;
+       align-items: center;
+       }
+       #name,#email,#password{
+           width:20rem
+       }
     /* footer */
 
 
@@ -275,91 +189,24 @@ p,h4,h2{
     }
 }   
 
-@media only screen and (max-width:460px){
+@media only screen and (max-width:476px){
     .main{
-        width: 70%;
-    }
-    .svg{
-        visibility: hidden;
-    }
-    #name{
-        width: 50%;
-    }
-    #email{
-        width: 50%;
-    }
-    #password{
-        width: 50%;
-    }
-    .btn{
-        width: 90%;
-    }
-
-    /* footer */
-
-
-    .footer{
-        display: flex;
-        flex-direction: column;
-        margin:2rem;
-    }
-    .socials{
-        margin: 2rem 0px;
-        padding:0rem;
-    }
-    .links > *{
-        border-bottom: 1px solid #fff;
-        padding: .5rem;
-    }
-    .links-2 > *{
-        border-bottom: 1px solid #fff;
-        padding: .5rem;
-    }
-    .links,.links-2,.socials{
-        margin-top: -.5rem;
+        width: 20rem;
+       }
+    #name,#email,#password{
+        width:17rem;
+        font-size: 16px;
     }
 }
 
 @media only screen and (max-width:375px){
     .main{
-        width: 90%;
-    }
-    #name{
-        width: 60%;
-    }
-    #email{
-        width: 60%;
-    }
-    #password{
-        width: 60%;
-    }
-    .btn{
-        width: 90%;
-    }
-    .svg{
-        visibility: hidden;
-    }
-    /* footer */
-
-    .footer{
-        display: flex;
-        flex-direction: column;
-        margin: 2rem;
-    }
-    .socials{
-        margin: 2rem 0px;
-        padding:0rem;
-    }
-    .links > *{
-        border-bottom: 1px solid #fff;
-        padding: .5rem;
-    }
-    .links-2 > *{
-        border-bottom: 1px solid #fff;
-        padding: .5rem;
-    }
-    .links,.links-2,.socials{
-        margin-top: -.5rem;
+        
+        width: 20rem;
+       }
+    #name,#email,#password{
+        width:15rem;
+        font-size: 16px;
     }
 }
 
