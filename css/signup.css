@@ -65,10 +65,6 @@ body{
 #bar1 {
     transform: translateY(-4px);
 }
-/* 
-#bar2 {
-    width: 17px;
-} */
 
 #bar3 {
     transform: translateY(4px);
@@ -77,41 +73,27 @@ body{
 .main{
     margin: 5rem auto;
     background-color: #eee;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 70vw;
     border-radius: 2rem 0;
 }
 .form{
-    display: flex;
-    flex-direction: column;
+    display: block;
     padding: 2rem;
+    margin-top: 3rem;
 }
-.fa{
-    width:px;
+.form i {
+    font-size: 20px;
 }
-#name{
+
+input[type=text],
+input[type=email],
+input[type=password] {
     padding: .6rem 7rem .6rem 3rem;
-    margin: .1rem 0;
+    margin: .9rem 0;
     border-radius: 5px;
     border: 1px solid #fff;
-    cursor: pointer;
-    font-size: 18px;
-}
-#email{
-    padding: .6rem 7rem .6rem 3rem;
-    margin: .1rem 0;
-    border-radius: 5px;
-    border: 1px solid #fff;
-    cursor: pointer;
-    font-size: 18px;
-}
-#password{
-    padding: .6rem 7rem .6rem 3rem;
-    margin: .1rem 0;
-    border-radius: 5px;
-    border: 1px solid #fff;
-    cursor: pointer;
     font-size: 18px;
 }
 .btn{
@@ -125,21 +107,12 @@ body{
     border: 1px solid #0F59D2;
     background:#0F59D2;
 }
-.fa-user-o{
-    position: relative;
-    top:2.5rem;
-    left:.5rem;
-
-}
-.fa-envelope-o{
-    position: relative;
-    top:2.5rem;
-    left:.5rem; 
-}
+.fa-user-o,
+.fa-envelope-o,
 .fa-key{
     position: relative;
-    top:2.5rem;
-    left:.5rem;
+    top: .1rem;
+    left: 2.2rem;
 }
 .svg {
 	width: 400px;
@@ -214,9 +187,19 @@ footer hr {
 /* media querries */
 
 @media only screen and (max-width:1200px){
-    .svg {
+    /* .svg {
        display: none;
     }
+     */
+
+     .fa-user-o,
+     .fa-envelope-o,
+     .fa-key{
+         position: relative;
+         top: 3rem;
+         left: 1.8rem;
+    }
+
     .main{
         justify-content: center;
         align-items: center;
